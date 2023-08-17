@@ -1,2 +1,48 @@
 #!/bin/bash
-#add fix to exercise5-server2 here
+
+#sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
+#
+#if ! (grep -q server1 /etc/hosts); then
+#   sed -i '$ a 192.168.60.10 server1' /etc/hosts
+#fi
+#if ! (grep -q server1 /etc/ssh/ssh_config); then
+#  sed -i '$ a Host server1\n    StrictHostKeyChecking no\n' /etc/ssh/ssh_config
+#fi
+#
+#
+#systemctl restart sshd
+#apt-get update
+#apt-get install sshpass
+#sshpass -p "vagrant" scp vagrant@server1:/home/vagrant/.ssh/id_rsa.pub /tmp
+#cat /tmp/id_rsa.pub >>  /home/vagrant/.ssh/authorized_keys
+
+echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCawVGCTEV2xtYuPyXMHrM2uiulA0/d3I6yo3eIaXt+vBLul5dddnDXF6McDzimpkCELzSFxdyQuiRzPPuqnJdUB0cuVo8uE2EYsHWgVE5Ul7I9R5zTM/jh4SX0EWAaxzIp9HphjiAdUlwxykQHPum7+A6eRc32gztRz7EOgsyAbe4G4qFMZ+9gncY50GajifJ9UD1I+tH4cieOnYy3crJQEig6McJoRnEaKR7N946e6ix1rYcq/Fkp8MLzi48Z9aUQrBzchknncUKXaS+U6zwtm60EdjC1kY5FXu+N180doWmOX2+RuUkNTMGtwGg3qyJBa1MP5HCSOVHNbtgIrCDd vagrant@server2" >> /home/vagrant/.ssh/id_rsa.pub
+echo "-----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABFwAAAAdzc2gtcn
+NhAAAAAwEAAQAAAQEAmsFRgkxFdsbWLj8lzB6zNrorpQNP3dyOsqN3iGl7frwS7peXXXZw
+1xejHA84pqZAhC80hcXckLokczz7qpyXVAdHLlaPLhNhGLB1oFROVJeyPUec0zP44eEl9B
+FgGscyKfR6YY4gHVJcMcpEBz7pu/gOnkXN9oM7Uc+xDoLMgG3uBuKhTGfvYJ3GOdBmo4ny
+fVA9SPrR+HInjp2Mt3KyUBIoOjHCaEZxGikezfeOnuosda2HKvxZKfDC84uPGfWlEKwc3I
+ZJ53FCl2kvlOs8LZutBHYwtZGORV7vjdfNHaFpjl9vkblJDUzBrcBoN6siQWtTD+RwkjlR
+zW7YCKwg3QAAA8juAS7G7gEuxgAAAAdzc2gtcnNhAAABAQCawVGCTEV2xtYuPyXMHrM2ui
+ulA0/d3I6yo3eIaXt+vBLul5dddnDXF6McDzimpkCELzSFxdyQuiRzPPuqnJdUB0cuVo8u
+E2EYsHWgVE5Ul7I9R5zTM/jh4SX0EWAaxzIp9HphjiAdUlwxykQHPum7+A6eRc32gztRz7
+EOgsyAbe4G4qFMZ+9gncY50GajifJ9UD1I+tH4cieOnYy3crJQEig6McJoRnEaKR7N946e
+6ix1rYcq/Fkp8MLzi48Z9aUQrBzchknncUKXaS+U6zwtm60EdjC1kY5FXu+N180doWmOX2
++RuUkNTMGtwGg3qyJBa1MP5HCSOVHNbtgIrCDdAAAAAwEAAQAAAQEAkqmvs8rQ8lZS2ZVj
+HuXhdnZNsp9G676BRm+Bczh0n5FiZ9gmzZ7YJiDypj8Os3FQJ3YNUtJHzKl8rfIXmIO7Lx
+mOri2+mC4pkRp6/62mZqk1dLoPuGHC919Hdt2YtQgfVH+sFBR7/w307gMBIdTP8yKNyBXj
+skKAz3IEHPp9ESCkdQetlTA9GcWY32zMKhmo9q6R6XuzOj0JeE/EUAh6PbavKPZwRChchK
+1m5Y1MF0Nm6vTxsdefbE/53XsNqh/jQ3wq1Aux6oAZ75miZJEgJ9hbIxDn5qCWqVBThrFh
+vvk7eFAADHU66lcFKBheXOdP0r3qQpb7vEaxCM0wY1pTgQAAAIEAr/NngF0TVdMuf9WwZ7
+SDS5XQ3NKyyTozo2eYDep12AMF3bUSgIgnhAbHjpmT1fQvrAkNbCQPn6yjmiP8S2vbArCL
+YITJZX3lxAaOWKlq3++MsWNUf3RCZ5kxJoT/DHBJnwMPJk0pKFZ4Jp60W/dMruQZGCqh1r
+UB7YJTlBB3TbEAAACBAMd01f7Gda1RFQqZXBrz0qC+grr4tm8UE3jflPRIPo5yIT2Tz1g7
+CV3HibXH5/hzO0UEj15U3XU6XQaICs/Bpd8C+f20jTvvjf3npGsLXIO3DdCw0EBCkMb2Vs
+8+YPC5Nozh1HPO1axu4PpvoeQBrvHje5DwS4HbuVNQ27nH5WPtAAAAgQDGoGA6osY8pQrg
+r2BS0DIqukun634g78LdtxlLSO0WueOCWN9+4bv9GjaSaxVbxZUCvAKQ6BX/rN+oSJA9if
+a0r+mbZGMKZemyRq7bUCkRVwEf5o3p9JAq+OiRHh+ioQcEAVyhDHCmwHVb91fOdExxrfLN
+4n3s9ch5Jq1YCYzysQAAAA92YWdyYW50QHNlcnZlcjIBAg==
+-----END OPENSSH PRIVATE KEY-----" >> /home/vagrant/.ssh/id_rsa
+echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDXnGCdot5c76Gaj4aIIZzaGR+yfOr22Ih52p8mAuoZ3h5Tek4udv+h4lKfrgsuUtTIJp/QKXWBwIVLOgKpD+PdLpHO00q4XPrfiz3XcBeWWpe99BdXkk11whjV6+SotkL/7qaDJc1hETdeVcdI8n86xN/fw7THj96+gV7Id3++1d8fwvTovN6ZsFw/rTP+q/nLh2rAIjTYY2mh8m4MBnxUSQ3d9oBahiN1+5M0B0Sl1YzZMWjvdlasVzfS+lPxKxjFsf5fKPkKkYbiZDVhlD84dgzLa6CbsW/n78wLdtFBV6Trvd5bBZGP4U4xbuzpjfirZLRC4XdJkpxsUcC7kNF7 vagrant@server1" >> /home/vagrant/.ssh/authorized_keys
+
